@@ -4,7 +4,7 @@ const Navbar = ()=>{
     return (
         <nav>
         <div className="nav_img_div">
-            <a href="#"><img src="../../public/tonarg-logo.png" alt="tonarg-logo" /></a>
+            <a href="#"></a>
         </div>
         <ul className="nav_ul">
             <li>
