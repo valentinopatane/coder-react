@@ -3,19 +3,12 @@ import "./navbar.css"
 const Navbar = ()=>{
     return (
         <nav>
-        <div class="nav_img_div">
-            <a href="#"><img src="../../public/tonarg-logo.png" alt="tonarg-logo"></img></a>
+        <div className="nav_img_div">
+            <a href="#"><img src="../../public/tonarg-logo.png" alt="tonarg-logo" /></a>
         </div>
-        <ul class="nav_ul">
-            <li class="nav_products">
-                Productos<i class="fas fa-angle-down"></i>
-                <ul class="nav_sublist">
-                    <li><a href="">Todos los productos</a></li>
-                    <li><a href="">Categoria</a></li>
-                    <li><a href="">Categoria</a></li>
-                    <li><a href="">Categoria</a></li>
-                    <li><a href="">Calculadora de litros</a></li>
-                </ul>
+        <ul className="nav_ul">
+            <li>
+                <a href="">Productos</a>
             </li>
             <li><a href="">Decoración</a></li>
             <li><a href="">Acerca de</a></li>
