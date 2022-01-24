@@ -36,6 +36,10 @@ nav{
    height: 55px;
    width: auto;
 }
+.nav_img_div a{
+    width: 100%;
+    height: 100%;
+}
 /*Lista de links*/
 .nav_ul{
     width: 60%;
