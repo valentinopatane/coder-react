@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: whitesmoke;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+
+}
+nav ul{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+nav ul li{
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+nav ul li:hover{
+    color: blue;
+}
