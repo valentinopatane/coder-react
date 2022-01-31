@@ -5,9 +5,8 @@ import ItemList from './components/ItemListContainer'
 function App() {
   return (
     <>
-      <Navbar></Navbar>
-      <ItemList name ="Valentino"></ItemList>
-
+      <Navbar />
+      <ItemList name="Valentino"></ItemList>
     </>
   );
 }
