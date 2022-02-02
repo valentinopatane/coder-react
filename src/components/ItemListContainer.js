@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ItemCount from "./ItemCount";
+import ItemListComponent from "./ItemList";
 
 function Greeting(props){
     return(
@@ -11,14 +12,14 @@ function Greeting(props){
                 </div>
             </Greet>
 
-            <Counter>
+            {/* <Counter>
                 <div className="Counter" >
                     <ItemCount stock={5} initial={1} />
                     <ItemCount stock={8} initial={2} />
                     <ItemCount stock={10} initial={3} />
                 </div>
-                
-            </Counter>
+            </Counter> */}
+            <ItemListComponent></ItemListComponent>
         </>
     )
 }
