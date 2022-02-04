@@ -1,25 +1,44 @@
 import React from "react";
 import styled from "styled-components";
 import ItemCount from "./ItemCount";
-import ItemListComponent from "./ItemList";
+import ItemList from "./ItemList";
 
-function Greeting(props){
+function ItemListContainer(props){
+    const [users, setUsers] = React.useState([]);
+
+    React.useEffect(()=>{
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then((response)=> response.json())
+        .then((json)=> setUsers(json));
+    }, []);
+
+function onAdd(counter){
+    if(counter > 0){
+        console.log(`Añadiste ${counter} producto/s`);
+    }
+    else{
+        console.log("No hay productos para añadir")
+    }
+
+}
     return(
         <>
             <Greet>
                 <div>
-                    <h1>¡Bienvenido <span>{props.name}</span>!</h1>
+                    <h1>¡Bienvenido <span>{props.greeting}</span>!</h1>
                 </div>
             </Greet>
 
-            {/* <Counter>
+            <Counter>
                 <div className="Counter" >
-                    <ItemCount stock={5} initial={1} />
-                    <ItemCount stock={8} initial={2} />
-                    <ItemCount stock={10} initial={3} />
+                    <ItemCount stock={5} initial={0} onAdd={onAdd}/>
+                    <ItemCount stock={8} initial={1} onAdd={onAdd}/>
+                    <ItemCount stock={10} initial={2} onAdd={onAdd}/>
                 </div>
-            </Counter> */}
-            <ItemListComponent></ItemListComponent>
+            </Counter>
+
+            
+            <ItemList users={users}></ItemList>
         </>
     )
 }
@@ -44,4 +63,4 @@ const Counter = styled.div`
 
 `
 
-export default Greeting;
+export default ItemListContainer;

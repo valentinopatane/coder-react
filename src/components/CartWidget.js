@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function Cart(){
+function CartWidget(){
     return(
         <>
             <CartLogo>
@@ -21,5 +21,5 @@ const CartLogo = styled.div`
     }
 `
 
-export default Cart;
+export default CartWidget;
 

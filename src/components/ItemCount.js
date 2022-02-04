@@ -1,28 +1,29 @@
 import React, {useState} from 'react';
 import './style.css';
 
-function ItemCount({stock, initial}){
+function ItemCount({stock, initial, onAdd}){
 
-    let [counter, setCounter] = useState(initial);
-
-    function onAdd(){
-        setCounter(counter +1);
+    const [counter, setCounter] = useState(initial);
+    function Increment(){
+        if(counter != stock){
+            setCounter(counter +1);
+        }
     } 
+    function Decrement(){
+        if(counter != initial){
+            setCounter(counter-1)
+        }
+    }
 
-    if(counter > stock){
-            counter = stock;
-            alert("Llegaste al límite de stock disponible")
-    }
-    else if(counter < initial){
-            counter = initial;
-    }
+
 
     return(
         <div className='count'>
             <p>Cantidad: {counter}</p>
             <div className='btn-section'>
-                <button onClick={onAdd}>+</button>
-                <button onClick= {()=> setCounter(counter -1)}>-</button>
+                <button onClick={Increment}>+</button>
+                <button onClick= {Decrement}>-</button>
+                <button onClick={()=> onAdd(counter)}>Añadir</button>
             </div>
         </div>
 

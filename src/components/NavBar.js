@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Cart from "./CartWidget";
+import CartWidget from "./CartWidget";
 
 function Navbar(){
     return(
@@ -14,7 +14,7 @@ function Navbar(){
                         <a href="/">Products</a>
                         <a href="/">About</a>
                     </div>
-                    <Cart></Cart>
+                    <CartWidget></CartWidget>
                 </nav>
             </NavContainer>
         </>
