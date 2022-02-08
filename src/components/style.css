@@ -1,47 +1,69 @@
-.count{
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    align-items: center;
-    justify-content: center;
-    height: max-content;
-    margin-bottom: 10px;
-    border: 1px solid rgb(195, 195, 195);
-}
-.btn-section{
-    padding: 10px;
-}
-.btn-section button{
-    background-color: transparent;
-    border: 1px solid #fff;
-    font-size: 30px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    color: rgb(114, 114, 114);
+/*----------Icono cart----------*/
+.cart_icon{
+    cursor:pointer;
+    color:#fff;
+    width: 20px;
+    height: 20px;
 }
 
-.btn-section button:hover{
-    background-color: rgb(226, 226, 226);
-}
-
+/*----------Shop list----------*/
 .itemList{
-    margin-top: 60px;
+    margin-top: 300px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows:  repeat(4, max-content);
     justify-items: center;
-    grid-gap: 20px;
+    z-index: 2;
+}
+.card{
+    background: #0b0c0d;
+    background: linear-gradient(-30deg,#010101,#0b0c0d 70%);
+    z-index: 2;
+}
+.cardText{
+    color:#000;
 }
 .itemList div{
     width: 100%;
     display: flex;
     justify-content: center;
+    color: #000;
 }
 .itemList div div{
     width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+/*----------Counter----------*/
+.count{
+    width: 100%;
+    height: 100px;
+    color: #000;
+}
+.btn-section{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.btn-section button{
+    background-color: transparent;
+    border: 1px solid rgb(0, 0, 0);
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: rgb(114, 114, 114);
+}
+
+.btn-section button:hover{
+    background-color: rgb(226, 226, 226);
 }
