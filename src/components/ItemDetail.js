@@ -1,13 +1,14 @@
-import React from "react";
+import * as React from 'react';
+import {Card,CardContent,CardMedia,Typography, CardActionArea, CardActions } from '@mui/material';
 
 const ItemDetail = ({ user }) => {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345 , marginTop:10}}>
           <CardActionArea>
             <CardMedia
               component="img"
               height="300"
-              image="https://media.istockphoto.com/vectors/front-view-of-mens-black-tshirt-mockup-on-dark-background-short-on-vector-id1002664032?k=20&m=1002664032&s=170667a&w=0&h=PmHO8KhcNEjy8DeNKRjWcLYGCbd73EJVQD9b3r2ZSBs="
+              image="https://www.woodwood.com/images/23077/da3920-492-phsym003-2000-3.jpg"
               alt="green iguana"
             />
             <CardContent>
@@ -28,4 +29,4 @@ const ItemDetail = ({ user }) => {
       );
 }
 
-export default ItemDetail
+export default ItemDetail;

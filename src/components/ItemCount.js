@@ -1,34 +1,3 @@
-// import React, {useState} from 'react';
-// import './style.css';
-
-// function ItemCount({stock, initial, onAdd}){
-
-//     const [counter, setCounter] = useState(initial);
-//     function Increment(){
-//         if(counter !== stock){
-//             setCounter(counter +1);
-//         }
-//     } 
-//     function Decrement(){
-//         if(counter !== initial){
-//             setCounter(counter-1)
-//         }
-//     }
-//     return(
-//         <div className='count'>
-//             <p>Cantidad: {counter}</p>
-//             <div className='btn-section'>
-//                 <button onClick={Increment}>↑</button>
-//                 <button onClick= {Decrement}>↓</button>
-//                 <button onClick={()=> onAdd(counter)}>+</button>
-//             </div>
-//         </div>
-
-//     );
-// };
-
-// export default ItemCount;
-
 import React, {useState} from 'react';
 import './style.css';
 
@@ -36,25 +5,22 @@ function ItemCount({stock, initial, onAdd}){
 
     const [counter, setCounter] = useState(initial);
     function Increment(){
-        if(counter != stock){
+        if(counter !== stock){
             setCounter(counter +1);
         }
     } 
     function Decrement(){
-        if(counter != initial){
+        if(counter !== initial){
             setCounter(counter-1)
         }
     }
-
-
-
     return(
         <div className='count'>
             <p>Cantidad: {counter}</p>
             <div className='btn-section'>
-                <button onClick={Increment}>+</button>
-                <button onClick= {Decrement}>-</button>
-                <button onClick={()=> onAdd(counter)}>Añadir</button>
+                <button onClick={Increment}>↑</button>
+                <button onClick= {Decrement}>↓</button>
+                <button onClick={()=> onAdd(counter)}>+</button>
             </div>
         </div>
 
@@ -62,3 +28,7 @@ function ItemCount({stock, initial, onAdd}){
 };
 
 export default ItemCount;
+
+
+
+

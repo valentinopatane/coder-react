@@ -1,4 +1,4 @@
-/*const Config = {
+const Config = {
     particles: {
       number: {
         value: 50,
@@ -110,4 +110,3 @@
 }
 
 export default Config;
-*/

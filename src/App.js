@@ -1,38 +1,30 @@
-// import React from 'react';
-// import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-// import './App.css';
-// //NAVBAR
-// import Navbar from './components/NavBar';
-// //PAGES
-// import Home from './views/home.js';
-// import Shop from './views/Shop';
-
-
-// function App() {
-//   return (
-//     <Router>
-//       <Navbar/>
-//       <Routes>
-//         <Route path={'views/Shop.js'} element={<Shop/>}/>
-//         <Route path={"*"} element={<Home/>}/>
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
+import React from 'react';
+import {Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import './App.css';
-import Navbar from './components/NavBar.js'
-import ItemListContainer from './components/ItemListContainer'
+//NAVBAR
+import Navbar from './components/NavBar';
+//PAGES
+import Home from './views/home.js';
+import Shop from './views/Shop';
+import ItemDetailContainer from './views/ItemDetailContainer';
+import CategoryList from './views/CategoryList';
+import Error404 from './views/Error404';
+
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <ItemListContainer greeting="Valentino"></ItemListContainer>
-    </>
+    <Router>
+      <Navbar/>
+      <Routes>
+        <Route exact path={'shop'} element={<Shop/>}/>
+        <Route exact path='/' element={<Home/>}/>
+        <Route exact path={'/shop/item/:id'} element={<ItemDetailContainer/>}/>
+        <Route exact path={'/category/:id'} element={<CategoryList/>}/>
+        <Route path='*' element={<Error404/>}/>
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+

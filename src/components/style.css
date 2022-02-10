@@ -1,3 +1,4 @@
+
 /*----------Icono cart----------*/
 .cart_icon{
     cursor:pointer;
@@ -8,7 +9,7 @@
 
 /*----------Shop list----------*/
 .itemList{
-    margin-top: 300px;
+    margin-top: 30px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -16,19 +17,27 @@
     justify-items: center;
     z-index: 2;
 }
+.itemList_div{
+    width: 100%;
+}
+.itemList_link{
+    width: 100%;
+    z-index: 100;
+    text-decoration: none;
+}
 .card{
     background: #0b0c0d;
     background: linear-gradient(-30deg,#010101,#0b0c0d 70%);
     z-index: 2;
 }
 .cardText{
-    color:#000;
+    color:#fff;
 }
 .itemList div{
     width: 100%;
     display: flex;
     justify-content: center;
-    color: #000;
+    color: #fff;
 }
 .itemList div div{
     width: 100%;
@@ -67,3 +76,41 @@
 .btn-section button:hover{
     background-color: rgb(226, 226, 226);
 }
+
+
+.subMenu{
+    width:100%;
+    height: 40px;
+    margin-top: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.subMenu ul{
+    z-index: 100;
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    width: 20%;
+    border-bottom: 1px solid #808080;
+
+}
+.subMenu_link{
+    padding-bottom: 10px;
+    z-index: 1000;
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+}
+.subMenu_link:hover{
+    color:#808080;
+    transition: all 0.125s ease-out;
+}
+
+.particles{
+    z-index: -1000;
+  }
