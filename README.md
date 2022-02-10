@@ -7,6 +7,8 @@ En las categorías, está hecho el routing pero los productos no cambian porque 
 
 Las páginas about, subscribe y archive, al ser complementarias no las he hecho todavía, me centré en completar la pre-entrega desde la view shop. Aproveché que no tenía las secciones construidas para crear un 'Error 404'.
 
+El componente Counter lo comenté ya que no es necesario para la pre-entrega pero no lo quiero eliminar, ya que probablemente nos sea útil en el futuro.
+
 También me tomé la libertad de crear un home y la sección que contiene ItemListContainer es Shop, espero que no sea un inconveniente.
 
 Gracias :)

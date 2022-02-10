@@ -35,17 +35,11 @@ const ItemComp = ({ user }) => {
               </Typography>
             </CardContent>
           </CardActionArea>
-          <>
+          {/* <>
             <div>
                 <ItemCount stock={5} initial={0} onAdd={onAdd}/>
             </div>
-          </>
-          <CardActions>
-            <Button size="small" color="primary">
-              Ver Detalles
-            </Button>
-          </CardActions>
-
+          </> */}
         </Card>
         
       );
