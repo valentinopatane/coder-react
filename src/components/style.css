@@ -50,7 +50,11 @@
 .count{
     width: 100%;
     height: 100px;
-    color: #000;
+    text-align: center;
+    margin-top: 20px;
+}
+.count p{
+    color: #fff;
 }
 .btn-section{
     width: 100%;
@@ -59,10 +63,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+
 }
 .btn-section button{
     background-color: transparent;
-    border: 1px solid rgb(0, 0, 0);
+
     width: 30px;
     height: 30px;
     font-size: 25px;
@@ -71,10 +76,23 @@
     align-items: center;
     cursor: pointer;
     color: rgb(114, 114, 114);
+    border: 1px solid rgb(0, 0, 0);
+}
+.btn-section_child{
+    background-color: rgb(119, 137, 167);
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    width: max-content;
+    height: 60px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    display: none;
 }
 
 .btn-section button:hover{
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(138, 138, 138);
 }
 
 
@@ -114,3 +132,15 @@
 .particles{
     z-index: -1000;
   }
+
+
+
+
+.item_detail_container{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

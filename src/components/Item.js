@@ -1,16 +1,8 @@
 import * as React from 'react';
-import {Card,CardContent,CardMedia,Typography, Button, CardActionArea, CardActions } from '@mui/material';
-import ItemCount from "./ItemCount";
+import {Card,CardContent,CardMedia,Typography, CardActionArea} from '@mui/material';
 
-function onAdd(counter){
-  if(counter > 0){
-      console.log(`Añadiste ${counter} producto/s`);
-  }
-  else{
-      console.log("No hay productos para añadir")
-  }
 
-}
+
 
 const ItemComp = ({ user }) => {
 
@@ -35,11 +27,7 @@ const ItemComp = ({ user }) => {
               </Typography>
             </CardContent>
           </CardActionArea>
-          {/* <>
-            <div>
-                <ItemCount stock={5} initial={0} onAdd={onAdd}/>
-            </div>
-          </> */}
+
         </Card>
         
       );

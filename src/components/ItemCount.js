@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './style.css';
+import {Link} from 'react-router-dom'
 
 function ItemCount({stock, initial, onAdd}){
 
@@ -15,15 +16,18 @@ function ItemCount({stock, initial, onAdd}){
         }
     }
     return(
-        <div className='count'>
-            <p>Cantidad: {counter}</p>
-            <div className='btn-section'>
-                <button onClick={Increment}>↑</button>
-                <button onClick= {Decrement}>↓</button>
-                <button onClick={()=> onAdd(counter)}>+</button>
+        <>
+            <div className='count'>
+                <p>Cantidad: {counter}</p>
+                <div className='btn-section'>
+                    <button onClick={Increment}>↑</button>
+                    <button onClick= {Decrement}>↓</button>
+                    <button onClick={()=> onAdd(counter)}>+</button>
+                </div>
             </div>
-        </div>
 
+            <Link className='btn-section_child' to={'/cart'}>Finalizar compra</Link>
+        </>
     );
 };
 
