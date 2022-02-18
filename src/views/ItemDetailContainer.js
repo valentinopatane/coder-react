@@ -1,27 +1,25 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState } from "react";
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
-
-
 import ItemDetail from '../components/ItemDetail';
 
 const ItemDetailContainer= () =>{
-    const [user, setUser] = useState([]);
+    const [item, setItem] = useState([]);
 
     let id = useParams();
-    let userID = id.id;
+    let itemID = id.id;
     
     useEffect(()=>{
-        axios(`https://jsonplaceholder.typicode.com/users/${userID}`).then(
+        axios(`https://jsonplaceholder.typicode.com/users/${itemID}`).then(
             (res)=> 
-            setUser(res.data)
+            setItem(res.data)
             );
-    }, [userID]);
+    }, [itemID]);
 
     return(
         <>
             <div className="item_detail_container">
-                <ItemDetail user={user}></ItemDetail>
+                <ItemDetail item={item}></ItemDetail>
             </div>
         </>
     );

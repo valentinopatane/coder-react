@@ -3,16 +3,16 @@ import ItemList from "./ItemList";
 
 
 function ItemListContainer(){
-    const [users, setUsers] = React.useState([]);
+    const [items, setItems] = React.useState([]);
 
     React.useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/users')
         .then((response)=> response.json())
-        .then((json)=> setUsers(json));
+        .then((json)=> setItems(json));
     }, []);
     return(
         <>
-            <ItemList users={users}></ItemList>
+            <ItemList items={items}></ItemList>
         </>
     )
 }

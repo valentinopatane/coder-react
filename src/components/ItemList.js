@@ -2,14 +2,16 @@ import React from 'react';
 import Item from './Item';
 import {Link} from "react-router-dom";
 
-const ItemList = ({ users })=>{
+
+const ItemList = ({ items })=>{
+
     return(
         <div className='itemList'>
-            {users.map((user)=>{
+            {items.map((item)=>{
                 return (
-                    <div className="itemList_div" key={user.id}>
-                        <Link className="itemList_link" to={`../shop/item/${user.id}`}>
-                            <Item user={user}></Item>
+                    <div className="itemList_div" key={item.id}>
+                        <Link className="itemList_link" to={`../shop/item/${item.id}`}>
+                            <Item item={item}></Item>
                         </Link>
                     </div>
                 )

@@ -3,7 +3,7 @@ import ItemListContainer from './ItemListContainer'
 import Particles from 'react-tsparticles';
 import Config from './config/ParticleConfig';
 
-const Category = (categoryID, key)=>{
+const Category = (categoryID)=>{
 
     let categoryName = categoryID.prop;
     return(

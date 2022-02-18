@@ -4,7 +4,7 @@ import {Card,CardContent,CardMedia,Typography, CardActionArea} from '@mui/materi
 
 
 
-const ItemComp = ({ user }) => {
+const ItemComp = ({ item }) => {
 
     return (
         <Card className='card'>
@@ -17,13 +17,13 @@ const ItemComp = ({ user }) => {
             />
             <CardContent >
               <Typography gutterBottom variant="h5" component="div" className="cardText">
-                {user.name}
+                {item.name}
               </Typography>
               <Typography variant="body2" className="cardText">
-                {user.email}
+                {item.email}
               </Typography>
                 <Typography variant="body2"className="cardText">
-                {user.website}
+                {item.website}
               </Typography>
             </CardContent>
           </CardActionArea>

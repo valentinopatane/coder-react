@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './style.css';
-import {Link} from 'react-router-dom'
+
 
 function ItemCount({stock, initial, onAdd}){
 
@@ -25,8 +25,6 @@ function ItemCount({stock, initial, onAdd}){
                     <button onClick={()=> onAdd(counter)}>+</button>
                 </div>
             </div>
-
-            <Link className='btn-section_child' to={'/cart'}>Finalizar compra</Link>
         </>
     );
 };

@@ -11,20 +11,25 @@ import CategoryList from './views/CategoryList';
 import Cart from './views/Cart'
 import Error404 from './views/Error404';
 
+//CONTEXT
+import {ItemsProvider} from './components/context/CartContext';
+
 
 function App() {
   return (
-    <Router>
-      <Navbar/>
-      <Routes>
-        <Route exact path={'shop'} element={<Shop/>}/>
-        <Route exact path='/' element={<Home/>}/>
-        <Route exact path={'/shop/item/:id'} element={<ItemDetailContainer/>}/>
-        <Route exact path={'/category/:id'} element={<CategoryList/>}/>
-        <Route exact path='/cart' element={<Cart/>}/> 
-        <Route path='*' element={<Error404/>}/>
-      </Routes>
-    </Router>
+    <ItemsProvider>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route exact path={'shop'} element={<Shop/>}/>
+          <Route exact path='/' element={<Home/>}/>
+          <Route exact path={'/shop/item/:id'} element={<ItemDetailContainer/>}/>
+          <Route exact path={'/category/:id'} element={<CategoryList/>}/>
+          <Route exact path='/cart' element={<Cart/>}/> 
+          <Route path='*' element={<Error404/>}/>
+        </Routes>
+      </Router>
+    </ItemsProvider>
   );
 }
 

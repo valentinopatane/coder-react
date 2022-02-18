@@ -1,15 +1,19 @@
-import * as React from 'react';
+import React, { useState } from "react";
 import {Card,CardContent,CardMedia,Typography, CardActionArea, CardActions } from '@mui/material';
 import ItemCount from "./ItemCount";
-import $ from "jquery";
+import {Link} from 'react-router-dom'
+import './style.css';
 
 
-const ItemDetail = ({ user }) => {
-  function onAdd(counter){
-    if(counter > 0){
-        console.log(`Añadiste ${counter} producto/s`);
-        $('.count').hide();
-        $('.btn-section_child').show();
+const ItemDetail = ({ item }) => {
+  const [IsAdded, setIsAdded] = useState(true);
+ 
+  //quantityToAdd hace referencia al parámetro 'counter' pasado en ItemCount
+  function onAdd(quantityToAdd){
+    if(quantityToAdd > 0){
+      setIsAdded(false)
+      console.log(`Añadiste ${quantityToAdd} unidad/es del producto ${item.name}`);
+
     }else{
         console.log("No hay productos para añadir")
     }
@@ -26,13 +30,13 @@ const ItemDetail = ({ user }) => {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                {user.name}
+                {item.name}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                {user.email}
+                {item.email}
               </Typography>
                 <Typography variant="body2" color="text.secondary">
-                {user.website}
+                {item.website}
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -40,9 +44,12 @@ const ItemDetail = ({ user }) => {
           </CardActions>
         </Card>
 
-        <div>
-          <ItemCount stock={5} initial={0} onAdd={onAdd}/>
-        </div>
+        {IsAdded ? (
+                  <div>
+                  <ItemCount stock={5} initial={0} onAdd={onAdd}/>
+                  </div>
+        ) : ( <Link className='btn-section_child' to={'/cart'}>Finalizar compra</Link>)
+        }
 
       </>
 

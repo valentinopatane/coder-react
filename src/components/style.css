@@ -67,7 +67,6 @@
 }
 .btn-section button{
     background-color: transparent;
-
     width: 30px;
     height: 30px;
     font-size: 25px;
@@ -77,18 +76,6 @@
     cursor: pointer;
     color: rgb(114, 114, 114);
     border: 1px solid rgb(0, 0, 0);
-}
-.btn-section_child{
-    background-color: rgb(119, 137, 167);
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    width: max-content;
-    height: 60px;
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid rgb(0, 0, 0);
-    display: none;
 }
 
 .btn-section button:hover{
@@ -143,4 +130,17 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+
+.btn-section_child{
+
+    background-color: rgb(119, 137, 167);
+    padding: 10px;
+    border-radius: 10px;
+    width: max-content;
+    height: max-content;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
 }
