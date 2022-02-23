@@ -10,10 +10,8 @@ import ItemDetailContainer from './views/ItemDetailContainer';
 import CategoryList from './views/CategoryList';
 import Cart from './views/Cart'
 import Error404 from './views/Error404';
-
 //CONTEXT
-import {ItemsProvider} from './components/context/CartContext';
-
+import {ItemsProvider} from './components/context/ItemsContext';
 
 function App() {
   return (

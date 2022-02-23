@@ -2,9 +2,7 @@ import React from 'react';
 import Item from './Item';
 import {Link} from "react-router-dom";
 
-
 const ItemList = ({ items })=>{
-
     return(
         <div className='itemList'>
             {items.map((item)=>{
@@ -19,8 +17,5 @@ const ItemList = ({ items })=>{
         </div>
     )
 }
-
-
-
 
 export default ItemList;

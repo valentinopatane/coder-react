@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import CartWidget from "./CartWidget";
-
 import {Link} from "react-router-dom";
 
 function Navbar(){
@@ -16,11 +15,13 @@ function Navbar(){
                         <Link to="/subscribe">Subscribe</Link>
                         <Link to="/about">About</Link>
                     </ul>
-                    <CartWidget></CartWidget>
+                    <Link to="/cart"style={{marginTop: '5px'}} >
+                        <CartWidget ></CartWidget>
+                    </Link>
                 </nav>
             </NavContainer>
         </>
-    )
+    );
 }
 export default Navbar;
 

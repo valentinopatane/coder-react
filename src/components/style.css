@@ -13,37 +13,67 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:  repeat(4, max-content);
+    grid-template-rows:  repeat(3, 1fr);
     justify-items: center;
     z-index: 2;
 }
 .itemList_div{
     width: 100%;
+    display: flex;
+    height: 480px;
 }
 .itemList_link{
+    height: 100%;
     width: 100%;
     z-index: 100;
     text-decoration: none;
 }
 .card{
-    background: #0b0c0d;
+    background: #0b0c0d; 
     background: linear-gradient(-30deg,#010101,#0b0c0d 70%);
-    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out; 
+}
+.card:hover{
+    transition: all 0.2s;
+    box-shadow:inset 0px 0px 0px 1px rgb(26, 26, 26);
+}
+.card:hover > .item_img_div{
+    filter:brightness(1.2);
+    transition: all 0.2s ease-in-out; 
+}
+.cardTextContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
 }
 .cardText{
     color:#fff;
+    font-family:'Helvetica Neue' sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
-.itemList div{
+.item_img_div{
     width: 100%;
+    height: 90%;
     display: flex;
     justify-content: center;
-    color: #fff;
+    align-items: center;
 }
-.itemList div div{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.item_img{
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
 }
 
 /*----------Counter----------*/
