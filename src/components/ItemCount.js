@@ -18,7 +18,7 @@ function ItemCount({stock, initial, onAdd}){
     return(
         <>
             <div className='count'>
-                <p>Cantidad: {counter}</p>
+                <p>Quantity: {counter}</p>
                 <div className='btn-section'>
                     <button onClick={Increment}>↑</button>
                     <button onClick= {Decrement}>↓</button>

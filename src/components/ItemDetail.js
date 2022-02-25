@@ -24,36 +24,26 @@ const ItemDetail = ({ item }) => {
   }
     return (
       <>
-        <Card sx={{ maxWidth: 345 , marginTop:10, marginBottom:3}}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="500"
-              image={item.image}
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div" className="item_detail_title">
-                {item.name}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Price: ${item.price}
-              </Typography>
-                <Typography variant="body2" color="text.secondary">
-                Stock: {item.stock}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-          </CardActions>
-        </Card>
-        {/* Operador condicional muestra el contador o el botón */}
+        <div className="item_detail">
+          <div className="item_detail_img">
+            <img src={item.image}></img>
+          </div>
+          <div className="item_detail_text">
+            <h1>{item.name}</h1>
+            <p>Price: ${item.price}</p>
+            <p>Stock: {item.stock}</p>
+                    {/* Operador condicional muestra el contador o el botón */}
         {IsAdded ? (
                   <div>
                   <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
                   </div>
         ) : ( <Link className='btn-section_child' to={'/cart'}>Finalizar compra</Link>)
-        }
+        } 
+          </div>
+        </div>
+
+
+      
 
       </>
 

@@ -7,7 +7,7 @@ const SubMenu = ()=>{
             <div className="subMenu">
                 <ul>
                     <Link className="subMenu_link" to={"/category/all"}>All</Link>
-                    <Link className="subMenu_link" to={"/category/hoodies"}>Hoodies</Link>
+                    <Link className="subMenu_link" to={"/category/:top"}>Top pieces</Link>
                     <Link className="subMenu_link" to={"/category/tshirts"}>T-Shirts</Link>
                     <Link className="subMenu_link" to={"/category/sneakers"}>Sneakers</Link>
                 </ul>

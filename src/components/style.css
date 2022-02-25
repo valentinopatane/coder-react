@@ -153,15 +153,34 @@
 
 
 
-.item_detail_container{
+.item_detail{
     width: 100%;
-    height: max-content;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item_detail_img{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background: #0b0c0d; 
+    background: linear-gradient(-30deg,#010101,#0b0c0d 70%);
 }
-
+.item_detail_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #000;
+}
+.item_detail h1, p{
+    color: #fff;
+}
 
 .btn-section_child{
 
@@ -173,4 +192,76 @@
     color: #fff;
     text-decoration: none;
     border: 1px solid rgb(0, 0, 0);
+}
+
+
+
+.goToShop_cart{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.goToShop_cart h5{
+    color:#fff;
+    font-size: 35px;
+}
+.goTo_link{
+    padding: 10px;
+    box-shadow:inset 0px 0px 0px 1px rgb(26, 26, 26);
+    color:#fff;
+    text-decoration: none;
+}
+.goTo_link:hover{
+    background-color: #808080;
+    color:#000;
+    box-shadow:inset #000;
+    font-weight: 600;
+}
+.body_cart{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cartList {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 400px;
+    grid-gap: 10px;
+}
+.cartList_prod{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:inset 0px 0px 0px 1px rgb(26, 26, 26);
+}
+.cartList_prod_img_div{
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartList_prod_img_div img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.carting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carting span{
+    color:#fff;
+    margin-right: 6px;
 }
