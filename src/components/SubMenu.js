@@ -6,10 +6,10 @@ const SubMenu = ()=>{
     return(
             <div className="subMenu">
                 <ul>
-                    <Link className="subMenu_link" to={"/category/all"}>All</Link>
-                    <Link className="subMenu_link" to={"/category/:top"}>Top pieces</Link>
-                    <Link className="subMenu_link" to={"/category/tshirts"}>T-Shirts</Link>
-                    <Link className="subMenu_link" to={"/category/sneakers"}>Sneakers</Link>
+                    <Link className="subMenu_link" to={"/shop"}>All</Link>
+                    <Link className="subMenu_link" to={"/category/top"}>Top pieces</Link>
+                    <Link className="subMenu_link" to={"/category/pants"}>Pants</Link>
+                    <Link className="subMenu_link" to={"/category/accesory"}>Accesories</Link>
                 </ul>
             </div>
     )

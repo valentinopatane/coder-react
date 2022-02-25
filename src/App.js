@@ -7,7 +7,7 @@ import Navbar from './components/NavBar';
 import Home from './views/home.js';
 import Shop from './views/Shop';
 import ItemDetailContainer from './views/ItemDetailContainer';
-import CategoryList from './views/CategoryList';
+import CategoryList from './views/Categories';
 import Cart from './views/Cart'
 import Error404 from './views/Error404';
 //CONTEXT

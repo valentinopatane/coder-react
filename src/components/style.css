@@ -265,3 +265,15 @@
     color:#fff;
     margin-right: 6px;
 }
+
+
+.categorized_items{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+
+}
+.categorized_items div{
+    z-index: 100;
+}
