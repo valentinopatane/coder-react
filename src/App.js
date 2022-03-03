@@ -9,7 +9,9 @@ import Shop from './views/Shop';
 import ItemDetailContainer from './views/ItemDetailContainer';
 import CategoryList from './views/Categories';
 import Cart from './views/Cart'
+import Subscribe from './views/Subscribe';
 import Error404 from './views/Error404';
+
 //CONTEXT
 import {ItemsProvider} from './components/context/ItemsContext';
 
@@ -24,6 +26,7 @@ function App() {
           <Route exact path={'/shop/item/:id'} element={<ItemDetailContainer/>}/>
           <Route exact path={'/category/:id'} element={<CategoryList/>}/>
           <Route exact path='/cart' element={<Cart/>}/> 
+          <Route exact path={'/subscribe'} element={<Subscribe/>}/>
           <Route path='*' element={<Error404/>}/>
         </Routes>
       </Router>

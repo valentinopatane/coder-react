@@ -12,7 +12,6 @@ function Navbar(){
                     <ul className="aList">
                         <Link to="/shop">Store</Link>
                         <Link to="/archive">Archive</Link>
-                        <Link to="/subscribe">Subscribe</Link>
                         <Link to="/about">About</Link>
                     </ul>
                     <Link to="/cart"style={{marginTop: '5px'}} >

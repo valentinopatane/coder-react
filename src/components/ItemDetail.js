@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import {Card,CardContent,CardMedia,Typography, CardActionArea, CardActions } from '@mui/material';
 import ItemCount from "./ItemCount";
 import {Link} from 'react-router-dom'
 import './style.css';
@@ -26,7 +25,7 @@ const ItemDetail = ({ item }) => {
       <>
         <div className="item_detail">
           <div className="item_detail_img">
-            <img src={item.image}></img>
+            <img src={item.image} alt="product"></img>
           </div>
           <div className="item_detail_text">
             <h1>{item.name}</h1>
@@ -37,7 +36,7 @@ const ItemDetail = ({ item }) => {
                   <div>
                   <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
                   </div>
-        ) : ( <Link className='btn-section_child' to={'/cart'}>Finalizar compra</Link>)
+        ) : ( <Link className='btn-section_child' to={'/cart'}>Ir al carrito</Link>)
         } 
           </div>
         </div>

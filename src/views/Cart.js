@@ -19,7 +19,7 @@ const Cart =()=>{
                 ) : (
                 <div className="body_cart">
                     <h2 style={{color:'#fff', marginTop:'120px'}}>Total: {total}$</h2>
-                    <button onClick={()=>clearCart()} style={{backgroundColor:'#000', color:'#fff',marginBottom:'50px'}}>Limpiar carrito</button>
+                    <Link className="goTo_link" to={'/subscribe'}>Completar compra</Link>
                     <div className="cartList">
                         {products.map((product)=>{
                              return (
@@ -32,6 +32,9 @@ const Cart =()=>{
                                     <button style={{backgroundColor:'#000', color:'#fff',textAlign:'center'}}onClick={()=>deleteItem(product, product.id)}>Eliminar Producto</button>
                                 </div>)
                             })}
+                    </div>
+                    <div>
+                        <button onClick={()=>clearCart()} style={{backgroundColor:'#000', color:'#fff',marginBottom:'50px'}}>Limpiar carrito</button>
                     </div>
                 </div>
                 )

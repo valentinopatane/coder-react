@@ -277,3 +277,67 @@
 .categorized_items div{
     z-index: 100;
 }
+
+
+.form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+.form form{
+    background-color: transparent;
+    width: 100%;
+    height: max-content;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.form_textfield{
+    width: 98%;
+    height: 60px;
+    background-color: transparent;
+    color:#fff;
+    border: none;
+    border-top: 1px solid #808080;
+    font-size: 20px;
+}
+.form_textfield::placeholder{
+    color:#808080;
+    font-size: 20px;
+}
+.form_textfield:focus{
+    outline: none;
+}
+.form_submit{
+    
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 25px;
+}
+.success{
+    background-color: transparent;
+}
+.success p{
+    font-size: 20px;
+}
+.backSub{
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1000;
+    width: 100%;
+    height: 100vh;
+}
