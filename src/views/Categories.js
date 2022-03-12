@@ -1,20 +1,22 @@
-import {useParams} from 'react-router-dom';
 import React, { useEffect, useState } from "react";
+import {useParams, Link} from 'react-router-dom';
+//FIREBASE
 import { db } from '../components/firebase/FirebaseConfig';
 import { collection,query,where,getDocs } from 'firebase/firestore';
-import Item from '../components/Item';
-import { Link } from 'react-router-dom';
+//STYLE
 import '../components/style.css'
+//PARTICLES
 import Particles from 'react-tsparticles';
 import Config from '../components/config/ParticleConfig';
-
+//COMPONENTS
+import Item from '../components/Item';
 import SubMenu from '../components/SubMenu';
 
 const CategoryList = ()=>{
     const [categoryData, setCategoryData] = useState([]);
 
     const category = useParams();
-    const categoryID = category.id
+    const categoryID = category.id;
     useEffect(()=>{
         const getCategoryData = async () =>{
             const q = query(
@@ -24,8 +26,7 @@ const CategoryList = ()=>{
             const docs = [];
             const querySnapshot = await getDocs(q);
             querySnapshot.forEach((doc)=>{
-                docs.push({...doc.data(), id:doc.id})
-                console.log(doc.data())
+                docs.push({...doc.data(), id:doc.id});
             });
             setCategoryData(docs);
         };

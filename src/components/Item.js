@@ -2,8 +2,6 @@ import * as React from 'react';
 import './style.css';
 
 
-
-
 const Item = ({ item }) => {
 
   return (
@@ -25,6 +23,5 @@ const Item = ({ item }) => {
         
     );
 }
-
 export default Item
 

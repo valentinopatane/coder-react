@@ -12,7 +12,6 @@ export const ItemsProvider = ({children})=>{
     const [cartNumber, setCartNumber] = useState(0)
 
 //---------------------------------------------------------FUNCIONES AUXILIARES---------------------------------------------------------
-    //Checkea si un producto existe dentro del array products
     function isInCart(itemID){
         return products.some((product)=> product.id === itemID)
     }
@@ -28,7 +27,6 @@ export const ItemsProvider = ({children})=>{
             let resting = total - item.price
             setTotal(resting)
 
-            //Muestra o no el link al shop
             if(resting !== 0){
                 setHasProduct(false);
             }else{
@@ -37,12 +35,9 @@ export const ItemsProvider = ({children})=>{
         }
     }
     //---------------------------------------------ADD, DELETE & CLEAR to Cart, CARTNUMBER-------------------------------------------------
-    //addItem recibe como propiedad al item y a la cantidad desde ItemDetail
     const addItem = (item, quantityToAdd) =>{
             if(isInCart(item.id)){
-                //Si isInCart encuentra a través de array.some un producto foundItem compara ese producto añadido y el nuevo que ingresa
                 const foundProduct = products.find((product)=> product.id === item.id);
-                //El producto encontrado en foundItem, se le añade la quantity llamando a su propiedad quantity
                 foundProduct.quantity += quantityToAdd;
                 totalPrice(products);
             }
@@ -53,7 +48,6 @@ export const ItemsProvider = ({children})=>{
             setHasProduct(false)
             setProducts([...products]);
             setTimeout(howManyCart(),500)
-            console.log(products);
     }
 
     const deleteItem = (item, productID)=>{
@@ -75,7 +69,6 @@ export const ItemsProvider = ({children})=>{
              product.id !== productID)
              setProducts([...updatedProducts])}  
     }
-
     const clearCart =()=>{
         const clearArr = [];
         setProducts(clearArr);
@@ -83,15 +76,13 @@ export const ItemsProvider = ({children})=>{
         setHasProduct(true);
         setCartNumber(0);
     }
-
-    const howManyCart =(o)=>{
+    const howManyCart =()=>{
       
         let eachQuantity = products.map((product)=> product.quantity);
         const initialValue = 0;
         let totalQuantity = eachQuantity.reduce((acc,currentValue)=> acc + currentValue, initialValue)
         setCartNumber(totalQuantity)
     }
-    
     return(
         <ItemsContext.Provider value={{ products, addItem, deleteItem,clearCart, total, totalPrice, hasProduct, cartNumber}}>
             {children}

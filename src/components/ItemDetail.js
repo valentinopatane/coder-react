@@ -6,19 +6,14 @@ import { ItemsContext } from './context/ItemsContext'
 
 
 const ItemDetail = ({ item }) => {
-  //Estado interno maneja al botón finalizar compra
   const [IsAdded, setIsAdded] = useState(true);
-  //Context, llama a función addItem
+
   const { addItem } = useContext(ItemsContext);
-  //quantityToAdd hace referencia al parámetro 'counter' pasado en ItemCount
+
   function onAdd(quantityToAdd){
     if(quantityToAdd > 0){
       setIsAdded(false)
-      console.log(`Añadiste ${quantityToAdd} unidad/es del producto ${item.name}`);
-      //Función proveniente de context, envía al item y la cantidad.
       addItem(item, quantityToAdd);
-    }else{
-        console.log("No hay productos para añadir")
     }
   }
     return (
@@ -29,24 +24,22 @@ const ItemDetail = ({ item }) => {
           </div>
           <div className="item_detail_text">
             <h1>{item.name}</h1>
-            <p>Price: ${item.price}</p>
-            <p>Stock: {item.stock}</p>
-                    {/* Operador condicional muestra el contador o el botón */}
+            <p style={{width:'30%',fontSize:'14px',fontWeight:'600',letterSpacing:'1px',textAlign:'center'}}>{item.description}</p>
+            <p style={{fontSize:'18px',fontWeight:'400',letterSpacing:'1px',textAlign:'center'}}>Price: ${item.price} - Stock Available: {item.stock}</p>
+            
         {IsAdded ? (
                   <div>
                   <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
                   </div>
-        ) : ( <Link className='btn-section_child' to={'/cart'}>Ir al carrito</Link>)
+        ) : ( <div>
+                  <Link className="goTo_link" to={'/cart'}>Go to Cart</Link>
+                  <Link className="goTo_link" to={'/shop'}>Go to Shop</Link>
+              </div>)
         } 
           </div>
         </div>
-
-
-      
-
       </>
 
       );
 }
-
 export default ItemDetail;

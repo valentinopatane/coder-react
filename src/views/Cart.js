@@ -8,7 +8,6 @@ const Cart =()=>{
 
     const { products, deleteItem,clearCart,total,hasProduct} = useContext(ItemsContext);
     
-
     return(
         <>  
             {hasProduct ? (
@@ -19,7 +18,7 @@ const Cart =()=>{
                 ) : (
                 <div className="body_cart">
                     <h2 style={{color:'#fff', marginTop:'120px'}}>Total: {total}$</h2>
-                    <Link className="goTo_link" to={'/subscribe'}>Completar compra</Link>
+                    <Link className="goTo_link" to={'/checkout'} style={{marginBottom:'20px'}}>Complete Order</Link>
                     <div className="cartList">
                         {products.map((product)=>{
                              return (
@@ -29,25 +28,18 @@ const Cart =()=>{
                                     </div>
                                     <h3 style={{color:'#fff', marginBottom:'0px'}}>{product.name}</h3>
                                     <p style={{color:'#fff',marginTop:'0px'}}>{product.quantity} x {product.price}$</p>
-                                    <button style={{backgroundColor:'#000', color:'#fff',textAlign:'center'}}onClick={()=>deleteItem(product, product.id)}>Eliminar Producto</button>
+                                    <button className="goTo_link" style={{fontSize:'14px'}}onClick={()=>deleteItem(product, product.id)}>Remove Product</button>
                                 </div>)
                             })}
                     </div>
-                    <div>
-                        <button onClick={()=>clearCart()} style={{backgroundColor:'#000', color:'#fff',marginBottom:'50px'}}>Limpiar carrito</button>
+                    <div style={{marginTop:'20px'}}>
+                        <Link className="goTo_link" to={'/shop'}>Go to Shop</Link>
+                        <button className="goTo_link" onClick={()=>clearCart()} style={{marginLeft:'10px'}}>Clean Cart</button>
                     </div>
                 </div>
                 )
-            } 
-
-
-
-
-            
-        
+            }
         </>
     )
 }
-
-
 export default Cart

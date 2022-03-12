@@ -1,27 +1,25 @@
 import {useContext} from "react";
+//CSS
 import "./style.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+//Context
 import { ItemsContext } from './context/ItemsContext'
+
+import Icon from '../background/CART.png'
 
 
 function CartWidget(){
     const { cartNumber, hasProduct} = useContext(ItemsContext);
     return(
         <>  {hasProduct 
-            ?   <div className="carting">
-                    <FontAwesomeIcon class="cart_icon"icon={faShoppingCart} />
-                </div>
-            :   <div className="carting">
-                    <span>( {cartNumber} )</span> <FontAwesomeIcon class="cart_icon"icon={faShoppingCart} />
-                </div>
+            ?   (<div className="carting">
+                    <img src={Icon} alt="Cart"></img>
+                </div>)
+            :   (<div className="carting">
+                    <span>( {cartNumber} )</span> <img src={Icon} alt="Cart"></img>
+                </div>)
             }
-            
-            
         </>
     )
 }
-
-
 export default CartWidget;
 

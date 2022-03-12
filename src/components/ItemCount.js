@@ -5,6 +5,7 @@ import './style.css';
 function ItemCount({stock, initial, onAdd}){
 
     const [counter, setCounter] = useState(initial);
+    
     function Increment(){
         if(counter !== stock){
             setCounter(counter +1);
@@ -22,7 +23,7 @@ function ItemCount({stock, initial, onAdd}){
                 <div className='btn-section'>
                     <button onClick={Increment}>↑</button>
                     <button onClick= {Decrement}>↓</button>
-                    <button onClick={()=> onAdd(counter)}>+</button>
+                    <button onClick={()=> onAdd(counter)}>Add to cart</button>
                 </div>
             </div>
         </>

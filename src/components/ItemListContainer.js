@@ -1,11 +1,14 @@
-import React from "react";
-import ItemList from "./ItemList";
+import React, { useState } from "react";
+
 import { collection, query, getDocs } from "firebase/firestore";
 import { db } from './firebase/FirebaseConfig';
 
+import Spinner from "./Spinner";
+import ItemList from "./ItemList";
 
 function ItemListContainer(){
-    const [items, setItems] = React.useState([]);
+    const [items, setItems] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     
     React.useEffect(()=>{
         const getProducts = async ()=>{
@@ -16,14 +19,19 @@ function ItemListContainer(){
                 docs.push({...doc.data(), id: doc.id})
             })
             setItems(docs);
+            setIsLoading(false);
         }
         getProducts();
+
     }, []);
     return(
         <>
-            <ItemList items={items}></ItemList>
+            {isLoading?(
+                <Spinner/>
+            ):(
+                <ItemList items={items}></ItemList>
+            )}
         </>
     )
 }
-
 export default ItemListContainer;
